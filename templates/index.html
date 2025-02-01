@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">INICIO</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">DESCRIPCIÓN</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">LINKS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">El Profe Kinki</h1>
+        <p class="home__subtitle">Si aprender quieres; errar debes, sin dejar de avanzar</p>
+        <img class="dev" src="../static/img\developer.png"
+          />
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Descripción</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            El Profe Kinki es un bot de discord que tiene como objetivo ayudar a los estudiantes de matemáticas.
+            Este puede simplificar/resolver ecuaciones, funciones, etc gracias al uso de sympy. 
+            Mientras que su función de graficar, de numpy y PLT. 
+            Finalmente, su ultima función es que, atravez de una IA, el bot revise las imágenes que le mandes y te diga que tipo de función es. 
+            Esto gracias al modelo que que se puede ver en el repositorio.
+          </p>
+          <img class="gif" src="../static/img/Botsito.gif"
+          width="150"
+          height="125"
+          />
+          <ul class="Funciones">
+            <li>!resolver: Este comando le permite al bot de Discord resolver 
+              ecuaciones matemáticas o simplificar expresiones que le den los 
+              usuarios de manera automática. Dependiendo del problema ingresado, 
+              el bot determina si es una ecuación (si contiene =) o una expresión 
+              algebraica.
+              Es útil para estudiantes o cualquier persona que necesite resolver 
+              problemas matemáticos rápidamente dentro de un servidor de Discord. 
+            </li>
+          </ul><ul class="Funciones">
+            <li>!graficar: Este comando le permite al bot de Discord graficar 
+                funciones matemáticas y obtener un análisis detallado sobre la función 
+                ingresada por los usuarios.
+                Este comando es útil para visualizar funciones y entender sus 
+                características matemáticas sin necesidad de herramientas externas, 
+                todo dentro de un servidor de Discord. </li>
+          </ul><ul class="Funciones"> 
+            <li>!check: Este comando le permite al bot de Discord dar una prediccion 
+                a los usuarios del tipo de funcion que contiene la imagen que ellos enviaron,
+                utilizando un modelo de clasificación entrenado en Keras. 
+                Este sistema es útil para las personas que no esten seguros del tipo de funcion
+                que estan viendo en un grafico cualquiera, se puede usar con la imagen obtenida 
+                del !graficar o de la web.
+                Es importante resaltar que al dar el comando, el bot le pedira que adjunte una imagen 
+                y un nombre para la misma, para poder hacer la prediccion. Es preferible 
+                que la imagen sea de un grafico de una funcion matematica, por que no tendria sentido cualquier otra imagen. </li>
+              </li>
+          </ul>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Links</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/Github.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="aparte2__info">Github</span>
+              <span class="aparte1__info">Obtén su codigo</span>
+              <input class="skill__button" type="submit" name="button1" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="aparte2__info">Discord</span>
+              <span class="aparte1__info"> Entra a su server</span>
+              <input class="skill__button" type="submit" name="button2" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="aparte2__info">Discord</span>
+              <span class="aparte1__info"> Súmalo a tus filas</span>
+              <input class="skill__button" type="submit" name="button3" value="SHOW PROJECT">
+            </li>
+        </form>
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">Comentarios</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
