@@ -115,10 +115,10 @@ async def check(ctx, Nombre:str):
     if ctx.message.attachments:  # Manejo de archivos adjuntos
         for attachment in ctx.message.attachments:
             attachment.filename = f"{Nombre}.png"
-            await attachment.save(f"Imagenes/{attachment.filename}")
-            Grupo = (get_class(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"Imagenes/{attachment.filename}"))
-            Grupo1 = (get_class1(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"Imagenes/{attachment.filename}"))
-            await attachment.save(f"{Grupo1}/{attachment.filename}")
+            await attachment.save(f"Bot matematico/Imagenes/{attachment.filename}")
+            Grupo = (get_class(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"Bot matematico/Imagenes/{attachment.filename}"))
+            Grupo1 = (get_class1(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"Bot matematico/Imagenes/{attachment.filename}"))
+            await attachment.save(f"Bot matematico/{Grupo1}/{attachment.filename}")
             await ctx.send(f"Es una: {Grupo}")
     else:
         await ctx.send("Por favor, sube una imagen o proporciona un enlace.")
